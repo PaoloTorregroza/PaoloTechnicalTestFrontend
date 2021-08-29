@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import SelectCompany from "../pages/SelectCompany";
 import SelectProject from "../pages/SelectProject";
 import ProjectDashboard from "../pages/ProjectDashboard";
+import {publicPath} from "../../vue.config";
 
 Vue.use(VueRouter)
 
@@ -31,7 +32,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
-    mode: 'hash',
+    mode: 'history',
+    base: publicPath,
     routes
 })
 
